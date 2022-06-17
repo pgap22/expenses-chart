@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <section class="balance">
+      <div class="balance__text">
+        <h1 class="balance__title">My balance</h1>
+        <p class="balance__money">$921.48</p>
+      </div>
+      <div class="balance__img">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+    </section>
+  
+    <section class="chart">
+  
+      <h2 class="chart__title">Spending - Last 7 days</h2>
+  
+      <div class="chart__graphs">
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$10.00"></div>
+          <p>mon</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>tue</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>wed</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>thu</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>fri</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>sat</p>
+        </div>
+        <div class="chart__day" data-checked="no">
+          <div class="chart__graph" data-amount="$0.00"></div>
+          <p>sun</p>
+        </div>
+      </div>
+  
+  
+      <div class="chart__total">
+        <div class="chart__month">
+          <h3 class="chart__month-title">Total this month</h3>
+          <p class="chart__month-money">$478.33</p>
+        </div>
+  
+        <div class="chart__increment">
+          <p class="chart__percentage">+2.4%</p>
+          <p class="chart__last">from last month</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@700;800;900&display=swap');
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Soft-redOpacity: hsla(10, 79%, 65%, 0.657);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 100%;
+    max-width: 512px;
+}
+section{
+    margin: 10px;
+}
+.balance{
+    background-color: var(--Soft-red);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .5em;
+    align-items: center;
+}
+.balance__text{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.balance__title{
+    font-weight: 400;
+    font-size: 16px;
+}
+.balance__money{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.chart{
+    background-color: var(--Very-pale-orange);
+    padding: .5em;
+    border-radius: .2em;
+}
+.chart__day{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-self: flex-end;
+
+}
+
+.chart__graphs{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .4em;
+    color: var(--Medium-brown);
+    padding: .2em;
+    height: 200px;
+    font-size: 14px;
+
+}
+.chart__graph{
+    background-color: var(--Soft-red);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 35px;
+    height: 200px;
+    position: relative;
+    transition: ease 150ms;
+    /* i think 260px its the 100%*/
+}
+.chart__day:hover .chart__graph{
+    background-color: var(--Soft-redOpacity);
+}
+.chart__graph--active{
+    background-color: var(--Cyan);
+
+}
+
+.chart__day:hover .chart__graph::after{
+
+    content: attr(data-amount);
+    border: 1px solid var(--Dark-brown);
+    background-color: var(--Dark-brown);
+    position: absolute;
+    color: white;
+    padding: .3em;
+    border-radius: 3px;
+    font-weight: 700;
+    top: -30px;
+    margin: 0 auto; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+}
+.chart__day[data-checked="yes"] .chart__graph::after{
+    content: attr(data-amount);
+    border: 1px solid var(--Dark-brown);
+    background-color: var(--Dark-brown);
+    position: absolute;
+    color: white;
+    padding: .3em;
+    border-radius: 3px;
+    font-weight: 700;
+    top: -30px;
+    margin: 0 auto; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+}
+.chart__title{
+    color: var(--Dark-brown);
+    font-size: 20px;
+}
+.chart__total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 1em;
+    border-top: 1px solid var(--Cream);
+}
+.chart__month-title{
+    font-size: 16px;
+    color: var(--Medium-brown);
+}
+.chart__month-money{
+    font-size: 24px;
+    color: var(--Dark-brown);
+    font-weight: 700;
+}
+.chart__increment{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.chart__percentage{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Dark-brown);
+}
+.chart__last{
+    font-size: 14px;
+    color: var(--Medium-brown);
+    text-align: end;
+}
+
+
+@media (min-width: 480px) {
+  body{
+    align-items: center;
+    height: 100vh;
+  }
+  .balance, .chart{
+    border-radius: 10px;
+  }
+  .chart{
+    padding: 2rem 2rem;
+  }
+  .chart__title{
+    font-size: 30px; 
+  }
+  .chart__graph{
+    max-width: 35px;
+  }
+  .chart__graphs{
+    padding-bottom: 1rem;
+  }
+  .chart__month-money{
+    font-size: 40px;
+  }
+}
