@@ -17,13 +17,13 @@ body{
     font-size: 18px;
     font-family: 'DM Sans', sans-serif;
     background-color: var(--Cream);
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
-main{
+/* main{
     width: 100%;
     max-width: 512px;
-}
+} */
 section{
     margin: 10px;
 }
@@ -159,27 +159,3 @@ section{
 }
 
 
-@media (min-width: 480px) {
-  body{
-    align-items: center;
-    height: 100vh;
-  }
-  .balance, .chart{
-    border-radius: 10px;
-  }
-  .chart{
-    padding: 2rem 2rem;
-  }
-  .chart__title{
-    font-size: 30px; 
-  }
-  .chart__graph{
-    max-width: 35px;
-  }
-  .chart__graphs{
-    padding-bottom: 1rem;
-  }
-  .chart__month-money{
-    font-size: 40px;
-  }
-}

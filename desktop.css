@@ -1,0 +1,27 @@
+@import url("./style.css");
+
+    body{
+      align-items: center;
+      height: 100vh;
+      display: flex;
+      /* background-color: red; */
+      justify-content: center;
+    }
+    .balance, .chart{
+      border-radius: 10px;
+    }
+    .chart{
+      padding: 2rem 2rem;
+    }
+    .chart__title{
+      font-size: 30px; 
+    }
+    .chart__graph{
+      max-width: 35px;
+    }
+    .chart__graphs{
+      padding-bottom: 1rem;
+    }
+    .chart__month-money{
+      font-size: 40px;
+    }
